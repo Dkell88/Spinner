@@ -6,9 +6,9 @@ let spinnerChars = ['\r|   ','\r/   ','\r-   ', '\r\\   ', '\r|   ', '\r/   ','\
 for (let i = 0; i < 8 * numOfRotations; i ++) {
   spinner(i);
 }
-function spinner(i, time) {
+const spinner = function(i, time) {
   setTimeout(() => {
-    process.stdout.write(spinnerChars[i%7]);
-  }, (i * 200 + 100))
+    process.stdout.write(spinnerChars[i % 7]);
+  }, (i * 200 + 100));
 };
 
